@@ -35,7 +35,7 @@ void makeSum(int arr1[], int arr2[], int r1, int r2, int size1, int size2)
     std::cout<< "Sum of matrices:";
     for(int i=0; i<size1; i++)
     {
-        if(i%r1==0)
+        if(i%(size1/r1)==0)
             std::cout << std::endl;
         arr[i]=arr1[i]+arr2[i];
         std::cout<< arr[i]<< " ";
@@ -102,6 +102,7 @@ void makeMult(int arr1[], int arr2[], int r1, int r2, int size1, int size2)
                     std::cout<< arr[size1/r1*a+i]<< " ";
                }
             }
+            std::cout<< std::endl;
             }
     }
     else if(r1 == size2/r2)
@@ -123,6 +124,7 @@ void makeMult(int arr1[], int arr2[], int r1, int r2, int size1, int size2)
             std::cout<< arr[size1/r1*a+i]<< " ";
        }
     }
+    std::cout<<std::endl;
     }
     else
         std::cout<< "The matrices can not be multiplied. Dimension mismatch.\n";
